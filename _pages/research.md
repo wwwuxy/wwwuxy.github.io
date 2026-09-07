@@ -7,7 +7,7 @@ author_profile: true
 
 ## Computer Architecture
 
-Computer architecture and processor design.
+Computer architecture and processor architecture.
 
 ## Numerical Computing
 
