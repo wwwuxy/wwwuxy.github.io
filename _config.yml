@@ -18,7 +18,6 @@ author:
 breadcrumbs: false
 future: false
 read_more: "disabled"
-talkmap_link: false
 timezone: "Asia/Shanghai"
 
 include:
@@ -93,7 +92,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: false
       share: false
@@ -103,7 +102,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
 
 sass:
   sass_dir: _sass
