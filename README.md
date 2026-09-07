@@ -14,7 +14,17 @@ bundle exec jekyll serve
 
 Visit <http://localhost:4000>. Use `bundle exec jekyll build` for a production
 build, or `bash scripts/audit-site.sh` to run the content and generated-site
-checks together.
+checks together. The audit also requires Node.js for a focused JavaScript
+runtime check; its HTML parser is already included in the Ruby bundle.
+
+After changing the navigation or `assets/js/_main.js`, regenerate the served
+JavaScript bundle using the existing npm build tools:
+
+```bash
+npm install --ignore-scripts
+npm run build:js
+node scripts/check-site-js.js
+```
 
 ## Maintenance and deployment
 

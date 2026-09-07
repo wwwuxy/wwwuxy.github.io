@@ -31,6 +31,7 @@ include:
   - _pages
   - files
 exclude:
+  - "*.gem"
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -45,6 +46,8 @@ exclude:
   - Capfile
   - config
   - Dockerfile
+  - docker-compose.yaml
+  - docs
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
@@ -55,6 +58,7 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - scripts
   - tmp
   - vendor
 keep_files:

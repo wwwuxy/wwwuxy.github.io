@@ -57,6 +57,7 @@ function updateNav() {
 
   // Keep counter updated
   $btn.attr("count", breaks.length);
+  $btn.attr('aria-expanded', String(!$hlinks.hasClass('hidden')));
 
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
@@ -74,13 +75,24 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+if (screen.orientation && screen.orientation.addEventListener) {
+  screen.orientation.addEventListener("change", function () {
+    updateNav();
+  });
+}
 
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  $(this).attr('aria-expanded', String(!$hlinks.hasClass('hidden')));
+});
+
+$nav.on('keydown', function (event) {
+  if (event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close').attr('aria-expanded', 'false').focus();
+    event.preventDefault();
+  }
 });
 
 updateNav();

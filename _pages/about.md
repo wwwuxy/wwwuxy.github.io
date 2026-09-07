@@ -21,12 +21,11 @@ Personal homepage of wwwuxy — computer architecture, numerical computing, vect
 ## Selected Projects
 
 {% for project in site.data.projects %}
-  {% if project.featured %}
-    {% include project-card.html project=project %}
-  {% endif %}
+{% if project.featured %}
+{% include project-card.html project=project %}
+{% endif %}
 {% endfor %}
 
 ## Open Source
 
 Open-source projects are available on [GitHub](https://github.com/wwwuxy).
-diff --git a/_pages/research.md b/_pages/research.md

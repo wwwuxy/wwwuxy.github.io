@@ -1,12 +1,18 @@
 /* Homepage-specific refinements, imported last by assets/css/main.scss. */
 
 :root {
+  color-scheme: light;
   --site-ink: #1f2933;
   --site-muted: #52606d;
   --site-blue: #0b4f8a;
   --site-blue-dark: #073b66;
   --site-border: #cbd5df;
   --site-surface: #f8fafc;
+  --global-link-color: var(--site-blue);
+  --global-link-color-hover: var(--site-blue-dark);
+  --global-link-color-visited: var(--site-blue);
+  --global-text-color: var(--site-ink);
+  --global-text-color-light: var(--site-muted);
 }
 
 body {

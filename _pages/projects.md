@@ -10,12 +10,12 @@ author_profile: true
 ## {{ category }}
 
 {% for project in site.data.projects %}
-  {% if project.category == category %}
-    {% if project.description %}
-      {% include project-card.html project=project %}
-    {% else %}
-      <p><a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a></p>
-    {% endif %}
-  {% endif %}
+{% if project.category == category %}
+{% if project.description %}
+{% include project-card.html project=project %}
+{% else %}
+<p><a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a></p>
+{% endif %}
+{% endif %}
 {% endfor %}
 {% endfor %}

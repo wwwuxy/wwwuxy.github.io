@@ -19,16 +19,8 @@ for path in index.html research/index.html projects/index.html notes/index.html 
   test -f "_site/$path"
 done
 
-for url in \
-  https://github.com/wwwuxy \
-  https://github.com/wwwuxy/QVU \
-  https://github.com/wwwuxy/DFPVU \
-  https://github.com/wwwuxy/PVU \
-  https://github.com/wwwuxy/cvikernel \
-  https://github.com/wwwuxy/cviruntime \
-  https://github.com/wwwuxy/cnpy-for-tpu_mlir; do
-  rg -q "$url" _site
-done
+"${bundler[@]}" exec ruby scripts/check-rendered-site.rb
+node scripts/check-site-js.js
 
 test -f README.md
 ! rg -i -n 'Stuart Geiger|Robert Zupko|Michael Rose' _pages _data _config.yml README.md
