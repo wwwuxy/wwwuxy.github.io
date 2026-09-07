@@ -7,6 +7,12 @@ description: "Personal homepage of wwwuxy — computer architecture, numerical c
 url: "https://wwwuxy.github.io"
 baseurl: ""
 repository: "wwwuxy/wwwuxy.github.io"
+logo: "/images/profile.jpg"
+
+social:
+  name: "wwwuxy"
+  links:
+    - "https://github.com/wwwuxy"
 
 author:
   avatar: "profile.jpg"
