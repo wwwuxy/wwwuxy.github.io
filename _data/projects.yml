@@ -1,0 +1,106 @@
+- slug: dfpvu
+  name: "DFPVU — Dynamic Floating-point / Posit Vector Processing Unit"
+  url: https://github.com/wwwuxy/DFPVU
+  description: "A parameterizable vector processing unit supporting Posit and IEEE-754 floating-point formats for mixed-precision numerical computing."
+  category: Processor & Numerical Architecture
+  highlights:
+    - Posit arithmetic
+    - Vector operations
+    - Dot product
+    - FP4 / FP8 / FP16 / FP32 / FP64
+    - Float ↔ Posit conversion
+    - Runtime configurable precision
+    - Chisel → SystemVerilog
+    - Verilator verification
+  tags:
+    - Computer Architecture
+    - Chisel
+    - Posit
+    - Floating Point
+    - Vector Processing
+    - Mixed Precision
+  featured: true
+
+- slug: qvu
+  name: "QVU — Quantization Vector Unit"
+  url: https://github.com/wwwuxy/QVU
+  description: "A Chisel-based quantization vector unit designed for efficient low-precision neural-network inference. QVU converts Posit values into multiple target formats including FP4, FP8, FP16, INT4 and INT8 and supports vectorized quantization."
+  category: Processor & Numerical Architecture
+  tags:
+    - Chisel
+    - Quantization
+    - Posit
+    - FP4
+    - FP8
+    - AI Accelerator
+  featured: true
+
+- slug: pvu
+  name: "PVU — Posit Vector Unit"
+  url: https://github.com/wwwuxy/PVU
+  description: "A Chisel-based Posit vector processing unit supporting vector arithmetic and dot-product operations."
+  category: Processor & Numerical Architecture
+  highlights:
+    - Add
+    - Sub
+    - Mul
+    - Div
+    - Dot Product
+  tags:
+    - Posit
+    - Vector Architecture
+    - Chisel
+    - RTL
+    - Numerical Computing
+  featured: true
+
+- slug: cvikernel
+  name: cvikernel
+  url: https://github.com/wwwuxy/cvikernel
+  description: "Low-level kernel and instruction-generation infrastructure for TPU accelerator software stacks."
+  category: AI Accelerator Software Stack
+  tags:
+    - TPU
+    - Kernel
+    - Accelerator
+    - C++
+  featured: true
+
+- slug: cviruntime
+  name: cviruntime
+  url: https://github.com/wwwuxy/cviruntime
+  description: "A runtime SDK for developing and evaluating TPU applications, including testing, benchmarking and profiling utilities."
+  category: AI Accelerator Software Stack
+  tags:
+    - TPU
+    - Runtime
+    - SDK
+    - C++
+    - Accelerator
+  featured: true
+
+- slug: cnpy-for-tpu_mlir
+  name: cnpy-for-tpu_mlir
+  url: https://github.com/wwwuxy/cnpy-for-tpu_mlir
+  description: "C++ support for reading and writing NumPy .npy and .npz data, adapted for TPU / MLIR development workflows."
+  category: AI Accelerator Software Stack
+  tags:
+    - C++
+    - NumPy
+    - TPU
+    - MLIR
+
+- slug: cvibuilder
+  name: cvibuilder
+  url: https://github.com/wwwuxy/cvibuilder
+  category: Other Open Source
+
+- slug: rt-thread-am
+  name: rt-thread-am
+  url: https://github.com/wwwuxy/rt-thread-am
+  category: Other Open Source
+
+- slug: riscv-board-wandering
+  name: riscv-board-wandering
+  url: https://github.com/wwwuxy/riscv-board-wandering
+  category: Other Open Source
