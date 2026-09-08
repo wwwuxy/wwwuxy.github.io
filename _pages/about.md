@@ -8,8 +8,8 @@ author_profile: true
 <section class="lw-hero lw-hero--solo">
 <div>
 <p class="lw-eyebrow">Software Engineering · Computer Architecture · Numerical Computing</p>
-<h1 class="lw-title">吴欣宇</h1>
-<p class="lw-subtitle">西南科技大学软件工程硕士，工程造价学士。关注计算机体系结构、数值计算、向量处理与 AI 加速器的软硬件协同设计。</p>
+<h1 class="lw-title">WUXINYU/吴欣宇</h1>
+<p class="lw-subtitle">Master of Software Engineering from Southwest University of Science and Technology, focusing on computer architecture, GPGPU architecture, and hardware-software co-design of AI accelerators.</p>
 <div class="lw-tags">
   <span class="lw-tag">Computer Architecture</span>
   <span class="lw-tag">Numerical Computing</span>
