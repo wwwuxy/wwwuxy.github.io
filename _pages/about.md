@@ -5,28 +5,89 @@ permalink: /
 author_profile: true
 ---
 
-## About Me
+<section class="lw-hero lw-hero--solo">
+<div>
+<p class="lw-eyebrow">SWUST · Computer Architecture · Numerical Computing · AI Accelerators</p>
+<h1 class="lw-title">{{ site.author.name }}</h1>
+<p class="lw-subtitle">{{ site.description }}</p>
+<div class="lw-tags">
+  <span class="lw-tag">Computer Architecture</span>
+  <span class="lw-tag">Numerical Computing</span>
+  <span class="lw-tag">AI Accelerators</span>
+  <span class="lw-tag">Hardware/Software Co-design</span>
+</div>
+<div class="lw-actions">
+  <a class="lw-button" href="/publications/">Publications</a>
+  <a class="lw-button lw-button--ghost" href="/patents/">Patents</a>
+  <a class="lw-button lw-button--ghost" href="/projects/">Open Source</a>
+  <a class="lw-button lw-button--ghost" href="https://github.com/wwwuxy">GitHub</a>
+</div>
+</div>
+</section>
 
-Personal homepage of wuxinyu — computer architecture, numerical computing, AI accelerators.
+<section class="lw-section">
+<h2 class="lw-section-title">Research Focus</h2>
+<div class="lw-card-grid">
+<article class="lw-card">
+<h3>Computer Architecture</h3>
+<p>Processor microarchitecture design, GPGPU architecture, vector processing units, and domain-specific accelerators.</p>
+</article>
+<article class="lw-card">
+<h3>Numerical Computing</h3>
+<p>Posit arithmetic, IEEE-754 floating-point formats, mixed-precision computation, and hardware/software co-design for numerical accuracy.</p>
+</article>
+<article class="lw-card">
+<h3>AI Accelerator</h3>
+<p>TPU-style accelerator software stacks, Tensor Core design, quantization units, and low-precision inference hardware.</p>
+</article>
+<article class="lw-card">
+<h3>Vector Processing</h3>
+<p>Configurable vector units supporting FP4/FP8/FP16/FP32/FP64 and Posit formats with dot-product and quantization capabilities.</p>
+</article>
+</div>
+</section>
 
-<!-- TODO: Replace with full biography -->
+<section class="lw-section">
+<h2 class="lw-section-title">Selected Timeline</h2>
+<div class="lw-timeline">
+<div class="lw-timeline-item">
+  <strong>2024 — Now</strong>
+  <span>Graduate research in computer architecture, numerical computing, and AI accelerators at SWUST.</span>
+</div>
+<div class="lw-timeline-item">
+  <strong>DFPVU</strong>
+  <span>Designed a parameterizable vector processing unit supporting Posit and IEEE-754 floating-point formats.</span>
+</div>
+<div class="lw-timeline-item">
+  <strong>QVU</strong>
+  <span>Built a Chisel-based quantization vector unit for efficient low-precision neural-network inference.</span>
+</div>
+<div class="lw-timeline-item">
+  <strong>cvikernel / cviruntime</strong>
+  <span>Developed low-level kernel and runtime infrastructure for TPU accelerator software stacks.</span>
+</div>
+</div>
+</section>
 
-## Research Interests
-
-- Computer architecture
-- RISC-V
-- AI accelerators
-- Hardware / software co-design
-- GPGPU architecture
-
-## Selected Projects
-
+<section class="lw-section">
+<h2 class="lw-section-title">Open Source</h2>
+<div class="lw-card-grid">
 {% for project in site.data.projects %}
 {% if project.featured %}
-{% include project-card.html project=project %}
+<article class="lw-card lw-project-card">
+  <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+  <p>{{ project.description }}</p>
+  <a class="lw-mini-link" href="{{ project.url }}">GitHub →</a>
+</article>
 {% endif %}
 {% endfor %}
+</div>
+</section>
 
-## Open Source
-
-Open-source projects are available on [GitHub](https://github.com/wwwuxy).
+<section class="lw-section">
+<h2 class="lw-section-title">Selected Publications</h2>
+<div class="lw-card">
+  <p>No publications yet. This section will be updated as work is published.</p>
+  <a class="lw-mini-link" href="/publications/">Publications Page →</a>
+</div>
+</section>

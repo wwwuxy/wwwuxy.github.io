@@ -5,17 +5,27 @@ permalink: /projects/
 author_profile: true
 ---
 
+<section class="lw-hero lw-hero--compact lw-hero--solo">
+<div>
+<p class="lw-eyebrow">Open Source · Reproducible Systems · GPU Research</p>
+<h1 class="lw-title">Open Source Projects</h1>
+<p class="lw-subtitle">Selected repositories related to computer architecture, numerical computing, vector processing, and AI accelerators.</p>
+</div>
+</section>
+
+<section class="lw-section">
+<div class="lw-card-grid">
 {% assign project_categories = "Processor & Numerical Architecture|AI Accelerator Software Stack|Other Open Source" | split: "|" %}
 {% for category in project_categories %}
-## {{ category }}
-
 {% for project in site.data.projects %}
 {% if project.category == category %}
-{% if project.description %}
-{% include project-card.html project=project %}
-{% else %}
-<p><a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a></p>
-{% endif %}
+<article class="lw-card lw-project-card">
+  <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+  {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+  <a class="lw-mini-link" href="{{ project.url }}">GitHub →</a>
+</article>
 {% endif %}
 {% endfor %}
 {% endfor %}
+</div>
+</section>
