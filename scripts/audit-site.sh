@@ -15,7 +15,7 @@ bash scripts/check-content.sh
 "${bundler[@]}" exec jekyll clean
 "${bundler[@]}" exec jekyll build
 
-for path in index.html research/index.html projects/index.html notes/index.html cv/index.html; do
+for path in index.html research/index.html projects/index.html notes/index.html; do
   test -f "_site/$path"
 done
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-for route in / /research/ /projects/ /notes/ /cv/; do
+for route in / /research/ /projects/ /notes/; do
   test -n "$route"
 done
 
@@ -13,12 +13,12 @@ rg -q 'DFPVU' _data/projects.yml
 rg -q 'https://github.com/wwwuxy/DFPVU' _data/projects.yml
 rg -q 'project-card' _includes/project-card.html
 
-for page in _pages/about.md _pages/research.md _pages/projects.md _pages/notes.md _pages/cv.md; do
+for page in _pages/about.md _pages/research.md _pages/projects.md _pages/notes.md; do
   test -f "$page"
 done
 
 test -f assets/css/custom.scss
 test -f assets/images/favicon.svg
 test -f robots.txt
-rg -q 'wwwuxy' _config.yml
+rg -q '吴欣宇' _config.yml
 rg -q 'viewport' _includes/head/custom.html

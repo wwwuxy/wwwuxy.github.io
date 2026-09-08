@@ -1,6 +1,6 @@
-# wwwuxy homepage
+# 吴欣宇个人主页
 
-A static AcademicPages/Jekyll homepage for wwwuxy, focused on computer
+A static AcademicPages/Jekyll homepage for 吴欣宇, focused on computer
 architecture, numerical computing, vector processing, and AI accelerators.
 
 ## Local development

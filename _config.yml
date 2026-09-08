@@ -1,23 +1,23 @@
 locale: "en-US"
 site_theme: "default"
-title: "wwwuxy"
+title: "吴欣宇"
 title_separator: "-"
-name: "wwwuxy"
-description: "Personal homepage of wwwuxy — computer architecture, numerical computing, vector processing and AI accelerators."
+name: "吴欣宇"
+description: "吴欣宇的个人主页：计算机体系结构、数值计算、向量处理与 AI 加速器。"
 url: "https://wwwuxy.github.io"
 baseurl: ""
 repository: "wwwuxy/wwwuxy.github.io"
-logo: "/images/profile.jpg"
+logo: ""
 
 social:
-  name: "wwwuxy"
+  name: "吴欣宇"
   links:
     - "https://github.com/wwwuxy"
 
 author:
-  avatar: "profile.jpg"
-  name: "wwwuxy"
-  bio: "Computer Architecture · Numerical Computing · AI Accelerators"
+  avatar: ""
+  name: "吴欣宇"
+  bio: "Software Engineering · Computer Architecture · Numerical Computing"
   email: "cswuxy@mails.swust.edu.cn"
   github: "wwwuxy"
 

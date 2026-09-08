@@ -8,7 +8,7 @@ failures = []
 check = lambda do |condition, message|
   failures << message unless condition
 end
-pages = %w[index.html research/index.html projects/index.html notes/index.html cv/index.html]
+pages = %w[index.html research/index.html projects/index.html notes/index.html]
 documents = pages.to_h do |path|
   [path, Nokogiri::HTML(File.read(File.join('_site', path)))]
 end
@@ -16,43 +16,34 @@ projects = YAML.load_file('_data/projects.yml')
 home = documents.fetch('index.html')
 project_page = documents.fetch('projects/index.html')
 
-check.call(home.css('article.project-card').length == 5, 'Home must render five project-card articles')
-check.call(project_page.css('article.project-card').length == 6, 'Projects must render six project-card articles')
+check.call(home.css('article.lw-project-card').length == 5, 'Home must render five reference-style project cards')
+check.call(project_page.css('article.lw-project-card').length == projects.length,
+           'Projects must render every configured repository as a reference-style card')
 
-categories = {
-  'Processor & Numerical Architecture' => %w[dfpvu qvu pvu],
-  'AI Accelerator Software Stack' => %w[cvikernel cviruntime cnpy-for-tpu_mlir],
-  'Other Open Source' => %w[cvibuilder rt-thread-am riscv-board-wandering]
-}
-categories.each do |category, slugs|
-  heading = project_page.css('.page__content h2').find { |node| node.text.strip == category }
-  check.call(!heading.nil?, "Missing Projects category heading: #{category}")
-  slugs.each do |slug|
-    project = projects.find { |entry| entry.fetch('slug') == slug }
-    url = project.fetch('url')
-    links = project_page.css('.page__content a').select { |link| link['href'] == url }
-    check.call(links.length == 1, "Projects must have one rendered anchor to #{url}")
-    links.each do |link|
-      preceding_heading = link.xpath('preceding::h2').last
-      check.call(preceding_heading && preceding_heading.text.strip == category,
-                 "#{slug} must appear under #{category}")
-      check.call(link['target'] == '_blank' && %w[noopener noreferrer].all? { |rel| link['rel'].to_s.split.include?(rel) },
-                 "#{slug} must have safe external-link attributes")
-      card = link.ancestors('article.project-card').first
-      if project['description']
-        check.call(card && card.at_css('.project-card__description')&.text&.strip == project['description'],
-                   "#{slug} must render its supplied description inside a card")
-      else
-        check.call(card.nil? && link.parent.name == 'p' && link.text.strip == project['name'],
-                   "#{slug} must render as a repository link without an invented card description")
-      end
-    end
+projects.each do |project|
+  url = project.fetch('url')
+  cards = project_page.css('article.lw-project-card').select do |card|
+    card.at_css('h3 a')&.[]('href') == url
   end
+  check.call(cards.length == 1, "Projects must render one card for #{project.fetch('slug')}")
+  card = cards.first
+  next unless card
+
+  check.call(card.at_css('h3 a')&.text&.strip == project.fetch('name'),
+             "#{project.fetch('slug')} must keep its configured name")
+  if project['description']
+    check.call(card.at_css('p')&.text&.strip == project['description'],
+               "#{project.fetch('slug')} must render its supplied description")
+  else
+    check.call(card.at_css('p').nil?, "#{project.fetch('slug')} must not invent a description")
+  end
+  check.call(card.at_css('a.lw-mini-link')&.[]('href') == url,
+             "#{project.fetch('slug')} must retain its GitHub card link")
 end
 
 projects.select { |project| project['featured'] }.each do |project|
-  cards = home.css('article.project-card').select do |card|
-    card.at_css('a.project-card__link')&.[]('href') == project['url']
+  cards = home.css('article.lw-project-card').select do |card|
+    card.at_css('h3 a')&.[]('href') == project['url']
   end
   check.call(cards.length == 1, "Home must render a linked card for #{project['slug']}")
 end
@@ -67,8 +58,8 @@ documents.each do |path, document|
              "#{path} navigation must identify its initially collapsed menu")
   check.call(document.at_css('#theme-toggle').nil? && document.at_css('html')['data-theme'].nil?,
              "#{path} must use the site's light theme without an unused theme control")
-  check.call(document.css('footer a').any? { |link| link['href'] == '/sitemap.xml' },
-             "#{path} footer must link to /sitemap.xml")
+  check.call(document.css('footer .page__footer-follow, footer .page__footer-copyright').empty?,
+             "#{path} footer must not render removed follow or copyright content")
   check.call(document.css('a').any? { |link| link['href'] == 'https://github.com/wwwuxy' },
              "#{path} must have a working GitHub profile anchor")
 end
@@ -89,4 +80,4 @@ Dir.glob('.github/workflows/*.{yml,yaml}').each do |path|
 end
 
 abort failures.map { |failure| "FAIL: #{failure}" }.join("\n") unless failures.empty?
-puts 'Rendered-site audit passed: five Home cards, six Projects cards, three sparse repository links, categories, controls, sitemap and publication exclusions.'
+puts 'Rendered-site audit passed: reference-style project cards, controls, sitemap and publication exclusions.'

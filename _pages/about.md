@@ -7,9 +7,9 @@ author_profile: true
 
 <section class="lw-hero lw-hero--solo">
 <div>
-<p class="lw-eyebrow">SWUST · Computer Architecture · Numerical Computing · AI Accelerators</p>
-<h1 class="lw-title">{{ site.author.name }}</h1>
-<p class="lw-subtitle">{{ site.description }}</p>
+<p class="lw-eyebrow">Software Engineering · Computer Architecture · Numerical Computing</p>
+<h1 class="lw-title">吴欣宇</h1>
+<p class="lw-subtitle">西南科技大学软件工程硕士，工程造价学士。关注计算机体系结构、数值计算、向量处理与 AI 加速器的软硬件协同设计。</p>
 <div class="lw-tags">
   <span class="lw-tag">Computer Architecture</span>
   <span class="lw-tag">Numerical Computing</span>
@@ -17,9 +17,8 @@ author_profile: true
   <span class="lw-tag">Hardware/Software Co-design</span>
 </div>
 <div class="lw-actions">
-  <a class="lw-button" href="/publications/">Publications</a>
-  <a class="lw-button lw-button--ghost" href="/patents/">Patents</a>
-  <a class="lw-button lw-button--ghost" href="/projects/">Open Source</a>
+  <a class="lw-button" href="/projects/">Open Source</a>
+  <a class="lw-button lw-button--ghost" href="/research/">Research</a>
   <a class="lw-button lw-button--ghost" href="https://github.com/wwwuxy">GitHub</a>
 </div>
 </div>
@@ -48,24 +47,20 @@ author_profile: true
 </section>
 
 <section class="lw-section">
-<h2 class="lw-section-title">Selected Timeline</h2>
-<div class="lw-timeline">
-<div class="lw-timeline-item">
-  <strong>2024 — Now</strong>
-  <span>Graduate research in computer architecture, numerical computing, and AI accelerators at SWUST.</span>
-</div>
-<div class="lw-timeline-item">
-  <strong>DFPVU</strong>
-  <span>Designed a parameterizable vector processing unit supporting Posit and IEEE-754 floating-point formats.</span>
-</div>
-<div class="lw-timeline-item">
-  <strong>QVU</strong>
-  <span>Built a Chisel-based quantization vector unit for efficient low-precision neural-network inference.</span>
-</div>
-<div class="lw-timeline-item">
-  <strong>cvikernel / cviruntime</strong>
-  <span>Developed low-level kernel and runtime infrastructure for TPU accelerator software stacks.</span>
-</div>
+<h2 class="lw-section-title">Technical Work</h2>
+<div class="lw-card-grid">
+<article class="lw-card">
+  <h3>Vector Processing &amp; Mixed Precision</h3>
+  <p>Parameterizable vector processing and quantization units supporting Posit and IEEE-754 formats, precision conversion, vector arithmetic, and dot products.</p>
+</article>
+<article class="lw-card">
+  <h3>Processor Simulation</h3>
+  <p>Processor simulation, instruction-set experimentation, and hardware/software co-design work for RISC-V-oriented systems.</p>
+</article>
+<article class="lw-card">
+  <h3>Accelerator Software</h3>
+  <p>Low-level kernel, runtime, verification, and profiling infrastructure for accelerator software stacks.</p>
+</article>
 </div>
 </section>
 
@@ -81,13 +76,5 @@ author_profile: true
 </article>
 {% endif %}
 {% endfor %}
-</div>
-</section>
-
-<section class="lw-section">
-<h2 class="lw-section-title">Selected Publications</h2>
-<div class="lw-card">
-  <p>No publications yet. This section will be updated as work is published.</p>
-  <a class="lw-mini-link" href="/publications/">Publications Page →</a>
 </div>
 </section>
