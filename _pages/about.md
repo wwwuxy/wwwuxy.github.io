@@ -7,16 +7,17 @@ author_profile: true
 
 ## About Me
 
-Personal homepage of wwwuxy — computer architecture, numerical computing, vector processing and AI accelerators.
+Personal homepage of wuxinyu — computer architecture, numerical computing, AI accelerators.
 
 <!-- TODO: Replace with full biography -->
 
 ## Research Interests
 
 - Computer architecture
-- Numerical computing
+- RISC-V
 - AI accelerators
 - Hardware / software co-design
+- GPGPU architecture
 
 ## Selected Projects
 
