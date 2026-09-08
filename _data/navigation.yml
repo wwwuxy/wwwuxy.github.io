@@ -7,8 +7,6 @@ main:
     url: /projects/
   - title: Notes
     url: /notes/
-  - title: CV
-    url: /cv/
   - title: GitHub
     url: https://github.com/wwwuxy
     external: true
