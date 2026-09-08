@@ -5,13 +5,11 @@ permalink: /patents/
 author_profile: true
 ---
 
-<section class="lw-hero lw-hero--compact lw-hero--solo">
-<div>
+<header class="lw-page-header">
 <p class="lw-eyebrow">Patents · Computer Architecture · Accelerator Design</p>
 <h1 class="lw-title">Selected Patent Applications</h1>
 <p class="lw-subtitle">Representative patent applications related to vector processing, numerical computing, and AI accelerator architectures. Application numbers and inventor details are intentionally omitted for privacy.</p>
-</div>
-</section>
+</header>
 
 <section class="lw-section">
 <div class="lw-card-grid">

@@ -5,13 +5,11 @@ permalink: /projects/
 author_profile: true
 ---
 
-<section class="lw-hero lw-hero--compact lw-hero--solo">
-<div>
+<header class="lw-page-header">
 <p class="lw-eyebrow">Open Source · Reproducible Systems · GPU Research</p>
 <h1 class="lw-title">Open Source Projects</h1>
 <p class="lw-subtitle">Selected repositories related to computer architecture, numerical computing, vector processing, and AI accelerators.</p>
-</div>
-</section>
+</header>
 
 <section class="lw-section">
 <div class="lw-card-grid">

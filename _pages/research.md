@@ -5,13 +5,11 @@ permalink: /research/
 author_profile: true
 ---
 
-<section class="lw-hero lw-hero--compact lw-hero--solo">
-<div>
+<header class="lw-page-header">
 <p class="lw-eyebrow">Research · Computer Architecture · Numerical Computing</p>
 <h1 class="lw-title">Research Areas</h1>
 <p class="lw-subtitle">Research focuses on computer architecture, numerical computing, vector processing, and AI accelerator design.</p>
-</div>
-</section>
+</header>
 
 <section class="lw-section">
 <div class="lw-card-grid">

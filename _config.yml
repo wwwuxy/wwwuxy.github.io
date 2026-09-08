@@ -1,6 +1,6 @@
-locale: "China"
+locale: "Ch"
 site_theme: "default"
-title: "WUXINYU"
+title: "WU XIN YU"
 title_separator: "-"
 name: "WUXINYU"
 description: "WUXINYU's Personal Homepage: Computer Architecture"
@@ -16,8 +16,8 @@ social:
 
 author:
   avatar: ""
-  name: "WUXINYU"
-  bio: "Software Engineering · Computer Architecture · GPGPU · RISC-V"
+  name: "Xinyu Wu / 吴欣宇"
+  bio: "GPGPU Architecture Modeling Engineer | Computer Architecture · GPGPU · RISC-V"
   email: "cswuxy@foxmail.com"
   github: "wwwuxy"
 

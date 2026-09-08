@@ -5,13 +5,11 @@ permalink: /publications/
 author_profile: true
 ---
 
-<section class="lw-hero lw-hero--compact lw-hero--solo">
-<div>
+<header class="lw-page-header">
 <p class="lw-eyebrow">Publications · Computer Architecture · Numerical Computing</p>
 <h1 class="lw-title">Selected Publications</h1>
 <p class="lw-subtitle">Publication list with code links where available. This section is under construction.</p>
-</div>
-</section>
+</header>
 
 <div class="archive">
 <p class="lw-subtitle">You can also find my articles on <a href="https://scholar.google.com/">my Google Scholar profile</a>.</p>

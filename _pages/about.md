@@ -8,7 +8,7 @@ author_profile: true
 <section class="lw-hero lw-hero--solo">
 <div>
 <p class="lw-eyebrow">Software Engineering · Computer Architecture · Numerical Computing</p>
-<h1 class="lw-title">WUXINYU/吴欣宇</h1>
+<h1 class="lw-title">WUXINYU</h1>
 <p class="lw-subtitle">Master of Software Engineering from Southwest University of Science and Technology, focusing on computer architecture, GPGPU architecture, and hardware-software co-design of AI accelerators.</p>
 <div class="lw-tags">
   <span class="lw-tag">Computer Architecture</span>

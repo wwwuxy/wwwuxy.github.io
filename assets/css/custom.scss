@@ -37,6 +37,16 @@
 .lw-hero--compact { grid-template-columns: minmax(0, 1.4fr) minmax(180px, 0.55fr); }
 .lw-hero--solo { grid-template-columns: 1fr; }
 
+/* The visual hero is reserved for Home; inner pages use this plain heading. */
+.lw-page-header {
+  margin: 0.4rem 0 2.2rem;
+  max-width: 58rem;
+}
+
+.lw-page-header .lw-title {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+}
+
 .lw-eyebrow {
   margin: 0 0 0.65rem;
   color: #0f766e;
