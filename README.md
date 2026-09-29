@@ -5,7 +5,7 @@ architecture, numerical computing, vector processing, and AI accelerators.
 
 ## Local development
 
-Install the Ruby dependencies, then start the development server:
+Use Ruby 3.3, install the Ruby dependencies, then start the development server:
 
 ```bash
 bundle install
@@ -33,6 +33,11 @@ node scripts/check-site-js.js
 - Site configuration: `_config.yml`
 - Posts: `_posts/`
 
-GitHub Pages publishes the generated Jekyll site after Pages is configured for
-this repository's publishing branch. The site uses GitHub Pages-compatible
-plugins and needs no custom deployment logic or secrets.
+The workflow in `.github/workflows/deploy.yml` builds this Jekyll site and
+publishes the generated `_site/` directory whenever `main` is pushed. In the
+repository's **Settings → Pages → Build and deployment**, set **Source** to
+**GitHub Actions**. The workflow can also be started from the Actions tab.
+
+This site does not use `npm run build` or a `dist/` directory for deployment.
+The npm script above is only for regenerating the committed JavaScript bundle
+after its source changes. No deployment secrets are required.
