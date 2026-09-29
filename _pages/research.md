@@ -7,11 +7,54 @@ author_profile: true
 
 <header class="lw-page-header">
 <p class="lw-eyebrow">Research · Computer Architecture · Numerical Computing</p>
-<h1 class="lw-title">Research Areas</h1>
 <p class="lw-subtitle">Research focuses on computer architecture, numerical computing, vector processing, and AI accelerator design.</p>
 </header>
 
+<section class="lw-section" aria-labelledby="research-papers-title">
+<h2 class="lw-section-title" id="research-papers-title">Selected Papers</h2>
+
+<article class="lw-publication-card lw-research-paper">
+  <figure class="lw-research-paper__figure">
+    <a href="/images/papers/pvu-architecture.png" aria-label="查看 PVU 论文主图大图">
+      <img src="/images/papers/pvu-architecture.png" width="888" height="640" loading="lazy" alt="PVU 论文图 4：Posit 向量处理单元及其在处理器流水线中的位置">
+    </a>
+    <figcaption>原文 Figure 4 · PVU 架构</figcaption>
+  </figure>
+  <div class="lw-publication-body">
+    <h3 class="lw-publication-title">PVU: A Posit Vector Processor Unit Based on RISC-V Extension for Advanced Floating-Point Computation</h3>
+    <p class="lw-publication-citation">PVU 是以 Chisel 构建的可参数化 Posit 向量处理单元，通过自定义 RISC-V 向量指令接入处理器，支持向量加、减、乘、除和点积。论文使用神经网络卷积层的量化数据验证运算结果，并与标量实现比较吞吐量和硬件资源开销。</p>
+  </div>
+</article>
+
+<article class="lw-publication-card lw-research-paper">
+  <figure class="lw-research-paper__figure">
+    <a href="/images/papers/qvu-architecture.png" aria-label="查看 QVU 论文主图大图">
+      <img src="/images/papers/qvu-architecture.png" width="848" height="830" loading="lazy" alt="QVU 论文图 4：IEEE 754 与 Posit 输入、量化格式及滑动窗口结构">
+    </a>
+    <figcaption>原文 Fig. 4 · QVU 架构</figcaption>
+  </figure>
+  <div class="lw-publication-body">
+    <h3 class="lw-publication-title">QVU: A RISC-V Vector-Extended Quantization Vector Unit For IEEE 754 and Posit Formats</h3>
+    <p class="lw-publication-citation">QVU 面向神经网络量化过程中的格式转换开销，提出兼容 IEEE 754 与 Posit 输入的向量量化单元。它借助统一中间表示和滑动窗口机制，支持 INT4、INT8、FP4、FP8、FP16 量化；论文以十种卷积神经网络的激活值分布评估量化结果和吞吐量。</p>
+  </div>
+</article>
+
+<article class="lw-publication-card lw-research-paper">
+  <figure class="lw-research-paper__figure">
+    <a href="/images/papers/dfpvu-architecture.png" aria-label="查看 DFPVU 论文主图大图">
+      <img src="/images/papers/dfpvu-architecture.png" width="1416" height="740" loading="lazy" alt="DFPVU 论文图 5：向量算术、格式转换和量化路径的结构图">
+    </a>
+    <figcaption>原文 Fig. 5 · DFPVU 架构</figcaption>
+  </figure>
+  <div class="lw-publication-body">
+    <h3 class="lw-publication-title">DFPVU: An RVV-Facing Dual-Format Floating-Point Vector Arithmetic Unit for Posit and IEEE 754</h3>
+    <p class="lw-publication-citation">DFPVU 在 RISC-V 向量扩展的执行边界组织 Posit 与 IEEE 754 双格式向量运算，以带标签的请求保存格式、有效通道数和累加状态。论文通过有序归约与链式累加实现 Posit32 矩阵乘法，并对四通道实现进行位级正确性、吞吐量和映射面积评估。</p>
+  </div>
+</article>
+</section>
+
 <section class="lw-section">
+<h2 class="lw-section-title">Research Areas</h2>
 <div class="lw-card-grid">
 <article class="lw-card">
   <h3>Computer Architecture</h3>
