@@ -7,10 +7,11 @@ author_profile: true
 
 <section class="lw-hero lw-hero--solo">
 <div>
-<p class="lw-eyebrow">Computer Architecture · Vector Processing · Numerical Computing</p>
+<p class="lw-eyebrow">Computer Architecture · GPGPU · Numerical Computing</p>
 <h1 class="lw-title">WUXINYU</h1>
-<p class="lw-subtitle">Master of Software Engineering from Southwest University of Science and Technology. My work focuses on RISC-V vector processing, Posit and IEEE 754 arithmetic, and low-precision quantization.</p>
+<p class="lw-subtitle">Master of Software Engineering from Southwest University of Science and Technology. My work focuses on GPGPU architecture modeling, RISC-V vector processing, Posit and IEEE 754 arithmetic, and low-precision quantization.</p>
 <div class="lw-tags">
+  <span class="lw-tag">GPGPU Architecture</span>
   <span class="lw-tag">RISC-V Vector Processing</span>
   <span class="lw-tag">Posit &amp; IEEE 754</span>
   <span class="lw-tag">Low-Precision Quantization</span>
@@ -25,7 +26,7 @@ author_profile: true
 
 <section class="lw-section">
 <h2 class="lw-section-title">Research Focus</h2>
-<div class="lw-card-grid">
+<div class="lw-card-grid lw-focus-grid">
 <article class="lw-card">
 <h3>Vector Processing</h3>
 <p>RISC-V vector units for arithmetic, dot products, and dual-format floating-point execution.</p>
@@ -34,7 +35,16 @@ author_profile: true
 <h3>Numerical Formats &amp; Quantization</h3>
 <p>Posit and IEEE 754 computation, precision conversion, and FP4, FP8, FP16, INT4, and INT8 quantization.</p>
 </article>
+<article class="lw-card">
+<h3>GPGPU Architecture</h3>
+<p>GPGPU architecture modeling, with a focus on parallel execution, compute organization, and memory behavior.</p>
+</article>
 </div>
+</section>
+
+<section class="lw-section" aria-labelledby="home-research-papers-title">
+<h2 class="lw-section-title" id="home-research-papers-title">Selected Papers</h2>
+{% include research-papers.html %}
 </section>
 
 <section class="lw-section">

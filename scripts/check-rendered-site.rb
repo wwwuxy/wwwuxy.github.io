@@ -16,9 +16,20 @@ projects = YAML.load_file('_data/projects.yml')
 home = documents.fetch('index.html')
 project_page = documents.fetch('projects/index.html')
 
-check.call(home.css('article.lw-project-card').length == 5, 'Home must render five reference-style project cards')
+check.call(home.css('article.lw-project-card').length == projects.count { |project| project['featured'] },
+           'Home must render every featured project card')
 check.call(project_page.css('article.lw-project-card').length == projects.length,
            'Projects must render every configured repository as a reference-style card')
+check.call(home.css('.lw-focus-grid article.lw-card h3').any? { |heading| heading.text.strip == 'GPGPU Architecture' },
+           'Home must show GPGPU in Research Focus')
+home_papers = home.css('article.lw-research-paper')
+research_papers = documents.fetch('research/index.html').css('article.lw-research-paper')
+check.call(home_papers.length == 3 && home_papers.map { |paper| paper.text.strip } == research_papers.map { |paper| paper.text.strip },
+           'Home must show the same three selected papers as Research')
+home_sections = home.css('h2.lw-section-title').map { |heading| heading.text.strip }
+check.call(home_sections.include?('Selected Papers') && home_sections.include?('Open Source') &&
+           home_sections.index('Selected Papers') < home_sections.index('Open Source'),
+           'Selected Papers must appear before Open Source on Home')
 
 projects.each do |project|
   url = project.fetch('url')
