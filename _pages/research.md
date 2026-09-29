@@ -18,7 +18,7 @@ author_profile: true
     <a href="/images/papers/pvu-architecture.png" aria-label="查看 PVU 论文主图大图">
       <img src="/images/papers/pvu-architecture.png" width="888" height="640" loading="lazy" alt="PVU 论文图 4：Posit 向量处理单元及其在处理器流水线中的位置">
     </a>
-    <figcaption>原文 Figure 4 · PVU 架构</figcaption>
+    <figcaption>原文图 4 · PVU 架构</figcaption>
   </figure>
   <div class="lw-publication-body">
     <h3 class="lw-publication-title">PVU: A Posit Vector Processor Unit Based on RISC-V Extension for Advanced Floating-Point Computation</h3>
@@ -31,7 +31,7 @@ author_profile: true
     <a href="/images/papers/qvu-architecture.png" aria-label="查看 QVU 论文主图大图">
       <img src="/images/papers/qvu-architecture.png" width="848" height="830" loading="lazy" alt="QVU 论文图 4：IEEE 754 与 Posit 输入、量化格式及滑动窗口结构">
     </a>
-    <figcaption>原文 Fig. 4 · QVU 架构</figcaption>
+    <figcaption>原文图 4 · QVU 架构</figcaption>
   </figure>
   <div class="lw-publication-body">
     <h3 class="lw-publication-title">QVU: A RISC-V Vector-Extended Quantization Vector Unit For IEEE 754 and Posit Formats</h3>
@@ -44,7 +44,7 @@ author_profile: true
     <a href="/images/papers/dfpvu-architecture.png" aria-label="查看 DFPVU 论文主图大图">
       <img src="/images/papers/dfpvu-architecture.png" width="1416" height="740" loading="lazy" alt="DFPVU 论文图 5：向量算术、格式转换和量化路径的结构图">
     </a>
-    <figcaption>原文 Fig. 5 · DFPVU 架构</figcaption>
+    <figcaption>原文图 5 · DFPVU 架构</figcaption>
   </figure>
   <div class="lw-publication-body">
     <h3 class="lw-publication-title">DFPVU: An RVV-Facing Dual-Format Floating-Point Vector Arithmetic Unit for Posit and IEEE 754</h3>
