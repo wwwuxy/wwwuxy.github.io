@@ -8,7 +8,7 @@ author_profile: true
 <section class="lw-hero lw-hero--solo">
 <div>
 <p class="lw-eyebrow">Computer Architecture · GPGPU · Numerical Computing</p>
-<h1 class="lw-title">WUXINYU</h1>
+<h1 class="lw-title">WUXINYU <span class="lw-title__cn" lang="zh-CN">吴欣宇</span></h1>
 <p class="lw-subtitle">Master of Software Engineering from Southwest University of Science and Technology. My work focuses on GPGPU architecture modeling, RISC-V vector processing, Posit and IEEE 754 arithmetic, and low-precision quantization.</p>
 <div class="lw-tags">
   <span class="lw-tag">GPGPU Architecture</span>
