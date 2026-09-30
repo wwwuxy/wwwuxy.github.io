@@ -8,13 +8,24 @@ failures = []
 check = lambda do |condition, message|
   failures << message unless condition
 end
-pages = %w[index.html research/index.html projects/index.html notes/index.html]
+pages = %w[index.html research/index.html projects/index.html notes/index.html notes/gpgpu/index.html]
 documents = pages.to_h do |path|
   [path, Nokogiri::HTML(File.read(File.join('_site', path)))]
 end
 projects = YAML.load_file('_data/projects.yml')
 home = documents.fetch('index.html')
 project_page = documents.fetch('projects/index.html')
+notes_page = documents.fetch('notes/index.html')
+gpgpu_page = documents.fetch('notes/gpgpu/index.html')
+
+check.call(notes_page.css('a[href="/notes/gpgpu/"]').any?, 'Notes must link to the GPGPU note')
+gpgpu_images = gpgpu_page.css('.page__content img')
+check.call(gpgpu_images.length == 50, 'GPGPU note must render all 50 images')
+gpgpu_images.each do |image|
+  src = image['src'].to_s
+  check.call(src.start_with?('/images/notes/gpgpu/') && File.file?(File.join('_site', src.delete_prefix('/'))),
+             "GPGPU image must exist in the generated site: #{src}")
+end
 
 check.call(home.css('article.lw-project-card').length == projects.count { |project| project['featured'] },
            'Home must render every featured project card')
