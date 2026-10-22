@@ -1,13 +1,9 @@
 ---
-title: "开源项目"
+title: "Projects"
 layout: single
 permalink: /projects/
 author_profile: true
 ---
-
-<header class="lw-page-header">
-<p class="lw-eyebrow">开源项目 · 智能学习工具</p>
-</header>
 
 <section class="lw-section" aria-label="开源项目">
 {% assign project_categories = "Processor & Numerical Architecture|AI Accelerator Software Stack|Other Open Source" | split: "|" %}

@@ -5,12 +5,6 @@ permalink: /notes/
 author_profile: true
 ---
 
-<header class="lw-page-header">
-<p class="lw-eyebrow">Notes · Computer Architecture · Numerical Computing</p>
-<h1 class="lw-title">Technical Notes</h1>
-<p class="lw-subtitle">Notes on GPGPU architecture, execution, scheduling, memory systems, and compute units.</p>
-</header>
-
 <section class="lw-section">
 <div class="lw-card-grid">
 <article class="lw-card lw-project-card">

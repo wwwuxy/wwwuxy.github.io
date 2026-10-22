@@ -26,7 +26,11 @@ check.call(!File.exist?('_site/cv/index.html'), 'The removed CV page must not be
 %w[research projects notes publications patents].each do |page|
   page_document = Nokogiri::HTML(File.read("_site/#{page}/index.html"))
   check.call(page_document.at_css('.lw-hero').nil?, "#{page} must not render the Home-only gradient hero")
-  check.call(!page_document.at_css('.lw-page-header').nil?, "#{page} must render a plain page header")
+  if %w[research projects notes].include?(page)
+    check.call(page_document.at_css('.lw-page-header').nil?, "#{page} must omit the removed secondary header")
+  else
+    check.call(!page_document.at_css('.lw-page-header').nil?, "#{page} must render a plain page header")
+  end
 end
 
 # Also verify non-index pages show WUXINYU in sidebar
