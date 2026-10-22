@@ -37,10 +37,14 @@ home_papers = home.css('article.lw-research-paper')
 research_papers = documents.fetch('research/index.html').css('article.lw-research-paper')
 check.call(home_papers.length == 3 && home_papers.map { |paper| paper.text.strip } == research_papers.map { |paper| paper.text.strip },
            'Home must show the same three selected papers as Research')
-home_sections = home.css('h2.lw-section-title').map { |heading| heading.text.strip }
-check.call(home_sections.include?('Selected Papers') && home_sections.include?('Open Source') &&
-           home_sections.index('Selected Papers') < home_sections.index('Open Source'),
-           'Selected Papers must appear before Open Source on Home')
+check.call([home, documents.fetch('research/index.html')].all? do |document|
+  document.css('h2').none? { |heading| heading.text.strip == 'Selected Papers' }
+end, 'Home and Research must omit the removed Selected Papers heading')
+home_sections = home.css('section.lw-section')
+paper_section_index = home_sections.index { |section| section.at_css('article.lw-research-paper') }
+project_section_index = home_sections.index { |section| section.at_css('article.lw-project-card') }
+check.call(paper_section_index && project_section_index && paper_section_index < project_section_index,
+           'Research papers must appear before Open Source on Home')
 
 projects.each do |project|
   url = project.fetch('url')

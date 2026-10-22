@@ -6,9 +6,9 @@ author_profile: true
 ---
 
 <header class="lw-page-header">
-<p class="lw-eyebrow">Open Source · Reproducible Systems · GPU Research</p>
+<p class="lw-eyebrow">Open Source · AI Agents · Learning Tools</p>
 <h1 class="lw-title">Open Source Projects</h1>
-<p class="lw-subtitle">Selected repositories related to computer architecture, numerical computing, vector processing, and AI accelerators.</p>
+<p class="lw-subtitle">Open-source software for AI-assisted learning.</p>
 </header>
 
 <section class="lw-section">

@@ -10,7 +10,6 @@ author_profile: true
 <p class="lw-subtitle">Research focuses on computer architecture, numerical computing, vector processing, and AI accelerator design.</p>
 </header>
 
-<section class="lw-section" aria-labelledby="research-papers-title">
-<h2 class="lw-section-title" id="research-papers-title">Selected Papers</h2>
+<section class="lw-section" aria-label="Research papers">
 {% include research-papers.html %}
 </section>

@@ -9,8 +9,8 @@ test -f _data/navigation.yml
 test -f _data/projects.yml
 test -f _includes/project-card.html
 
-rg -q 'DFPVU' _data/projects.yml
-rg -q 'https://github.com/wwwuxy/DFPVU' _data/projects.yml
+rg -q 'https://github.com/wwwuxy/Study-Agent-Framework' _data/projects.yml
+rg -q 'https://github.com/wwwuxy/DFPVU' _includes/research-papers.html
 rg -q 'project-card' _includes/project-card.html
 
 for page in _pages/about.md _pages/research.md _pages/projects.md _pages/notes.md _pages/gpgpu.md; do

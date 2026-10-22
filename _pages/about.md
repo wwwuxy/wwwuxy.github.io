@@ -42,8 +42,7 @@ author_profile: true
 </div>
 </section>
 
-<section class="lw-section" aria-labelledby="home-research-papers-title">
-<h2 class="lw-section-title" id="home-research-papers-title">Selected Papers</h2>
+<section class="lw-section" aria-label="Research papers">
 {% include research-papers.html %}
 </section>
 
