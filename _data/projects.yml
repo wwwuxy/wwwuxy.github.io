@@ -1,7 +1,11 @@
 - slug: study-agent-framework
-  name: "StudyAgent Framework"
+  name: "StudyAgent：个人学习工作台"
   url: https://github.com/wwwuxy/Study-Agent-Framework
-  description: "An AI-powered personal learning workspace that connects to your own model API for diagnostic assessment, guided lessons, practice, and spaced review. Web and CLI interfaces share learning progress, with support for PDF textbooks and knowledge tracking."
+  description: "StudyAgent 是一个支持自选模型的个人学习工作台，围绕学习目标串联诊断、讲解、练习与间隔复习。支持 PDF 教材检索、知识地图和学习进度跟踪，网页与命令行共用学习记录，可持续学习并调整计划。"
+  image: /images/projects/study-agent-knowledge.jpg
+  image_alt: "StudyAgent 知识地图界面：课程知识点、前置关系与知识点详情"
+  image_width: 1280
+  image_height: 1153
   category: Other Open Source
   tags:
     - AI Agents

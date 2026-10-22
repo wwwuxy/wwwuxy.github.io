@@ -1,26 +1,12 @@
-<article class="project-card">
-  <h3 class="project-card__title">
-    {{ include.project.name }}
-  </h3>
-  {% if include.project.subtitle %}
-    <p class="project-card__subtitle">{{ include.project.subtitle }}</p>
-  {% endif %}
-  {% if include.project.description %}
-    <p class="project-card__description">{{ include.project.description }}</p>
-  {% endif %}
-  {% if include.project.highlights and include.project.highlights.size > 0 %}
-    <ul class="project-card__highlights">
-      {% for highlight in include.project.highlights %}
-        <li>{{ highlight }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  {% if include.project.tags and include.project.tags.size > 0 %}
-    <ul class="project-card__tags" aria-label="Project technologies">
-      {% for tag in include.project.tags %}
-        <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  <a class="project-card__link" href="{{ include.project.url }}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+<article class="lw-publication-card lw-project-card">
+  <figure class="lw-research-paper__figure">
+    <a href="{{ include.project.image }}" aria-label="查看{{ include.project.name }}界面大图">
+      <img src="{{ include.project.image }}" width="{{ include.project.image_width }}" height="{{ include.project.image_height }}" loading="lazy" alt="{{ include.project.image_alt }}">
+    </a>
+  </figure>
+  <div class="lw-publication-body">
+    <h3 class="lw-publication-title"><a href="{{ include.project.url }}">{{ include.project.name }}</a></h3>
+    {% if include.project.description %}<p class="lw-publication-citation">{{ include.project.description }}</p>{% endif %}
+    <a class="lw-mini-link" href="{{ include.project.url }}">GitHub →</a>
+  </div>
 </article>

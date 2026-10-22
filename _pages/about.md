@@ -48,15 +48,9 @@ author_profile: true
 
 <section class="lw-section">
 <h2 class="lw-section-title">Open Source</h2>
-<div class="lw-card-grid">
 {% for project in site.data.projects %}
 {% if project.featured %}
-<article class="lw-card lw-project-card">
-  <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
-  <p>{{ project.description }}</p>
-  <a class="lw-mini-link" href="{{ project.url }}">GitHub →</a>
-</article>
+{% include project-card.html project=project %}
 {% endif %}
 {% endfor %}
-</div>
 </section>
